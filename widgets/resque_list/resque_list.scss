@@ -1,0 +1,95 @@
+// ----------------------------------------------------------------------------
+// Sass declarations
+// ----------------------------------------------------------------------------
+$background-color:  #66b1cc;
+$value-color:       #fff;
+
+$title-color:       rgba(255, 255, 255, 0.8);
+$label-color:       #d4e5e8;
+$updated-at-color:  rgba(0, 0, 0, 0.3);
+
+// ----------------------------------------------------------------------------
+// Widget-list styles
+// ----------------------------------------------------------------------------
+.widget-resque-list {
+
+  background-color: $background-color;
+
+  .title {
+    color: $title-color;
+  }
+
+  h1::after {
+
+    $offset: 170px;
+
+    content: "";
+    background: url("/assets/resque-logo.png") no-repeat;
+    clip: rect($offset, 400px, 400px, $offset);
+    display:block;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: -$offset;
+    left: -$offset;
+    z-index: 0;
+    opacity: 0.1;
+  }
+
+  ul {
+    margin: 0 15px;
+    text-align: left;
+    color: $label-color;
+  }
+
+  li {
+    margin-bottom: 5px;
+    padding: 0 5px;
+    position: relative;
+    z-index: 1;
+    line-height: 1.5;
+  }
+
+  .label {
+    color: $label-color;
+  }
+
+  .value {
+    float: right;
+    margin-left: 12px;
+    font-weight: 600;
+    color: $value-color;
+  }
+
+  .total-wrapper {
+    margin-top: 50px;
+    padding: 10px;
+    line-height: 30px;
+    font-size: 18px;
+    color: darken($value-color, 15);
+  }
+
+  .total {
+    font-weight: 600;
+    font-size: 76px;
+    line-height: 76px;
+    color: $value-color;
+    display: block;
+  }
+
+  .meter {
+    display: block;
+    height: 100%;
+    width: 0;
+    background-color: darken($background-color, 15);
+    text-indent: -9999px;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+  }
+
+  .updated-at {
+    color: $updated-at-color;
+  }
+}

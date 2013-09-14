@@ -1,0 +1,87 @@
+// ----------------------------------------------------------------------------
+// Sass declarations
+// ----------------------------------------------------------------------------
+$background-color:  #313d4e;
+$value-color:       #fff;
+
+$title-color:       rgba(255, 255, 255, 0.7);
+$label-color:       darken(rgba(255, 255, 255, 0.7), 45);
+$updated-at-color:  rgba(255, 255, 255, .2);
+$heatmap-cell-color:lighten($background-color, 3);
+
+// ----------------------------------------------------------------------------
+// Widget-list styles
+// ----------------------------------------------------------------------------
+.widget-resque-heatmap {
+
+  background-color: $background-color;
+
+  .title {
+    color: $title-color;
+  }
+
+  h1::after {
+
+    $offset: 170px;
+
+    content: "";
+    background: url("/assets/resque-logo.png") no-repeat;
+    clip: rect($offset, 400px, 400px, $offset);
+    display:block;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: -$offset;
+    left: -$offset;
+    z-index: 0;
+    opacity: 0.04;
+  }
+
+  .value {
+    font-weight: 600;
+    color: $value-color;
+  }
+
+  .updated-at {
+    color: $updated-at-color;
+  }
+
+  #resque-scheduled-heatmap {
+    position: relative;
+    margin: 25px 14px 0;
+  }
+
+  .graph-label {
+    font-size: 18px;
+    fill: $label-color
+  }
+
+  .graph-rect {
+    fill: $heatmap-cell-color
+  }
+
+  .q1 {
+    fill: lighten($heatmap-cell-color, 10)
+  }
+
+  .q2 {
+    fill:lighten($heatmap-cell-color, 20)
+  }
+
+  .q3 {
+    fill: lighten($heatmap-cell-color, 30)
+  }
+
+  .q4 {
+    fill: lighten($heatmap-cell-color, 40)
+  }
+
+  .q5 {
+    fill: lighten($heatmap-cell-color, 50)
+  }
+
+  .q6 {
+    fill: lighten($heatmap-cell-color, 65)
+  }
+
+}

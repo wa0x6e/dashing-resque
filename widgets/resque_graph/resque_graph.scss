@@ -1,0 +1,70 @@
+// ----------------------------------------------------------------------------
+// Sass declarations
+// ----------------------------------------------------------------------------
+$background-color:  #00B233;
+$value-color:       #fff;
+
+$failed-background-color:  #de5b45;
+
+$title-color:       rgba(255, 255, 255, 0.7);
+$label-color:       rgba(255, 255, 255, 0.7);
+$updated-at-color:  rgba(0, 0, 0, 0.4);
+
+// ----------------------------------------------------------------------------
+// Widget-list styles
+// ----------------------------------------------------------------------------
+.widget-resque-graph {
+
+  background-color: $background-color;
+  position: relative;
+  z-index: 0;
+
+  .title {
+    color: $title-color;
+  }
+
+  h1::after {
+
+    $offset: 170px;
+
+    content: "";
+    background: url("/assets/resque-logo.png") no-repeat;
+    clip: rect($offset, 400px, 400px, $offset);
+    display:block;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: -$offset;
+    left: -$offset;
+    z-index: 0;
+    opacity: 0.08;
+  }
+
+  .value {
+    font-weight: 600;
+    color: $value-color;
+  }
+
+  .updated-at {
+    color: $updated-at-color;
+  }
+
+  &.resque_failed_jobs {
+    background: $failed-background-color;
+  }
+
+  svg {
+    $opacity: 0.3;
+
+    position: absolute;
+    left: 0;
+    top: 10px;
+    z-index: -1;
+    opacity: $opacity;
+    fill-opacity: $opacity;
+  }
+
+  path {
+    fill: #000
+  }
+}

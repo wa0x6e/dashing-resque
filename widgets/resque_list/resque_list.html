@@ -1,0 +1,15 @@
+<h1 class="title" data-bind="title"></h1>
+
+<ul>
+  <li data-foreach-item="items">
+  	<span class="meter" data-bind="item.value | percentage total"></span>
+    <span class="label" data-bind="item.label"></span>
+    <span class="value" data-bind="item.value | prettyNumber"></span>
+  </li>
+</ul>
+
+<div class="total-wrapper">
+	Total <span class="total" data-bind="total | prettyNumber"></span>
+</div>
+
+<p class="updated-at" data-bind="updatedAtMessage"></p>

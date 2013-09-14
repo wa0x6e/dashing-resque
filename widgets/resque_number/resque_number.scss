@@ -1,0 +1,49 @@
+// ----------------------------------------------------------------------------
+// Sass declarations
+// ----------------------------------------------------------------------------
+$background-color:  #598595;
+$value-color:       #fff;
+
+$title-color:       rgba(255, 255, 255, 0.7);
+$label-color:       rgba(255, 255, 255, 0.7);
+$updated-at-color:  lighten($background-color, 15);
+$tick-color:        rgba(0, 0, 0, 0.4);
+
+// ----------------------------------------------------------------------------
+// Widget-list styles
+// ----------------------------------------------------------------------------
+.widget-resque-number {
+
+  background-color: $background-color;
+
+  .title {
+    color: $title-color;
+  }
+
+  h1::after {
+
+    $offset: 170px;
+
+    content: "";
+    background: url("/assets/resque-logo.png") no-repeat;
+    clip: rect($offset, 400px, 400px, $offset);
+    display:block;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: -$offset;
+    left: -$offset;
+    z-index: 0;
+    opacity: 0.08;
+  }
+
+  .value {
+    font-weight: 600;
+    color: $value-color;
+  }
+
+  .updated-at {
+    color: $updated-at-color;
+  }
+}
+
