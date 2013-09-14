@@ -16,8 +16,8 @@ This family contains 5 different widgets:
 
 ## Dependencies
 
-[resque](https://github.com/resque/resque)
-[resque-scheduler](https://github.com/resque/resque-scheduler)
+[resque](https://github.com/resque/resque)  
+[resque-scheduler](https://github.com/resque/resque-scheduler)  
 [redis](https://github.com/redis/redis-rb)
 
 Add them to dashing's gemfile:
