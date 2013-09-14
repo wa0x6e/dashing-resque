@@ -90,3 +90,7 @@ Each cell in the heatmap is representing the number of scheduled jobs per minute
 
 Since each application have their own order of magnitude, the difference between the minimum and maximum scheduled jobs per minute differs for each system.  
 Set the `@maxJobPerMinute` variable, in `/widgets/resque_heatmap/resque_heatmap.coffee` to the approximative number of maximum scheduled jobs per minute of your application, to have the widest color range for the heatmap.
+
+### Processed and failed jobs graph
+
+You can customize the "time range" of the graph, by editing the `graphWidth` variable in `/widgets/resque_graoh/resque/graph.coffee`. By default, it'll only display the last minute.
