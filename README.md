@@ -69,8 +69,8 @@ Then include the desired widget in a dashboard, by adding the following snippet 
 </li>
 ```
 
-Each widget is correspond to a job file (in the `/jobs` folder), except the processed and failed jobs counter widgets, that belongs to the same `resque_job.rb`.  
-To avoid sending unecessary requests to the redis server, include only the jobs you're using in the `/jobs` folder.
+Each widget corresponds to a job file (in the `/jobs` folder), except the processed and failed jobs counter widgets, that belongs to the same `resque_job.rb`.  
+To avoid sending unecessary requests to the redis server, only include the jobs you're using in the `/jobs` folder.
 
 ## Settings
 
@@ -88,5 +88,5 @@ The environment used is read from `ENV['DASHING_ENV']`.
 
 Each cell in the heatmap is representing the number of scheduled jobs per minute.  
 
-Since each system have their own order of magnitude, the difference between the minimum and maximum scheduled jobs per minute differs for each system.  
-Set the `@maxJobPerMinute` variable, in `/widgets/resque_heatmap/resque_heatmap.coffee` to the approximative number of maximum scheduled jobs per minute of your application, to have the widest heatmap color range.
+Since each application have their own order of magnitude, the difference between the minimum and maximum scheduled jobs per minute differs for each system.  
+Set the `@maxJobPerMinute` variable, in `/widgets/resque_heatmap/resque_heatmap.coffee` to the approximative number of maximum scheduled jobs per minute of your application, to have the widest color range for the heatmap.
