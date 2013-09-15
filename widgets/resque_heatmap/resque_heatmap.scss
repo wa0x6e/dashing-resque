@@ -48,7 +48,11 @@ $heatmap-cell-color:lighten($background-color, 3);
 
   #resque-scheduled-heatmap {
     position: relative;
-    margin: 25px 14px 0;
+    margin: 15px 14px 0;
+  }
+
+  .graph {
+    margin: 0 auto;
   }
 
   .graph-label {
