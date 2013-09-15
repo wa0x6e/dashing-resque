@@ -40,6 +40,7 @@ Then include the desired widget in a dashboard, by adding the following snippet 
   <div data-id="resque_scheduler_queue" data-view="ResqueHeatmap"  data-title="Scheduled jobs"></div>
 </li>
 ```
+Edit `/assets/javascripts/application.coffee` and add `#= require d3.v2.min.js` just below `#= require dashing.js`, to guarantee that d3.js is always loaded before the heatmap library.
 
 * For the queues widget
 ```html
